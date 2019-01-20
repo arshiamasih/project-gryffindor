@@ -3,10 +3,11 @@ function generateRandomNum(array) {
 }
 
 function getValue () {
+
   var name = document.querySelector('#name').value;
   var last = document.querySelector('#last').value;
   var pref = document.querySelector('#pref').value;
-  
+ 
   const cuisineObj = {
     ja: [ 'Daikokuya', 'Shinsengumi', 'Yoshinoya'],
     fr: [ 'test1', 'test2', "test5"],
@@ -31,6 +32,9 @@ function getValue () {
   let arrayIndex = generateRandomNum(cuisineObj[pref]);
 
   let restaurant = cuisineObj[pref][arrayIndex];
+
+  var total = document.querySelector('#result');
+  total.innerText = restaurant;
 
   console.log(restaurant);
 }

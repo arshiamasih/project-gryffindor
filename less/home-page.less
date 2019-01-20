@@ -2,7 +2,7 @@
 
 header {
   .center;
-  background-color: rgb(80, 192, 192);
+  background-color: @main-bg;
   padding: 30px 0;
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -13,9 +13,9 @@ header {
   }
 
   h1 {
+    color: @white;
+    font-family: @header-font;
     font-size: 6rem;
-    font-family: 'Pacifico', cursive;
-    color: white;
 
     @media @7 {
       font-size: 5.5rem;
@@ -24,15 +24,15 @@ header {
       font-size: 5rem;
     }
     @media @5 {
-      width: 80%;
       text-align: center;
+      width: 80%;
     }
   }
 }
 
 .intro {
-  margin: 30px 0 0;
   .flexcol;
+  margin: 30px 0 0;
   
   @media @5 {
     margin: 25px 5% 0;
@@ -53,17 +53,16 @@ header {
     li {
       font-size: 2rem;
       line-height: 2;
-
     }
   }
 }
 
 form {
-  max-width: 600px;
-  margin: 20px auto;
-  width: 90%;
   .center;
   flex-wrap: wrap;
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
 
   .name {
     .center;
@@ -74,53 +73,62 @@ form {
     }
 
     input {
-      width: 100%;
       font-size: 2rem;
+      width: 100%;
     }
   }
+
   .choices {
     .wide-center;
     .center;
     justify-content: space-around;
+
     @media @6 {
       .flexcol;
     }
 
     .history {
+      .flexcol;
       margin-top: 20px;
+
       @media @6 {
         margin-top: 40px;
       }
-      .flexcol;
+
       p {
         font-size: 2.5rem;
       }
+
       select {
-        margin-top: 25px;
-        font-size: 2rem;
         font-family: @main-font;
+        font-size: 2rem;
+        margin-top: 25px;
       }
     }
+
     .preference {
+      .flexcol;
       margin-top: 20px;
+
       @media @6 {
         margin-top: 40px;
       }
-      .flexcol;
+      
       p {
         font-size: 2.5rem;
       }
+
       select {
-        margin-top: 25px;
-        font-size: 2rem;
         font-family: @main-font;
+        font-size: 2rem;
+        margin-top: 25px;
       }
     }
   }
 
   button {
-    margin-top: 100px;
     .custom-btns;
+    margin-top: 100px;
   }
   
 }
@@ -135,6 +143,7 @@ footer {
     right: auto;
     max-width: 50px;
     padding-bottom: 20px;
+
     @media @6 {
       display: none;
     }

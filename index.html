@@ -1,14 +1,9 @@
 <!doctype html>
-
 <html lang="en">
-
 <head>
-
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  
   <title>Restaurant Roulette</title>
-
   <link href="css/index.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Pacifico" rel="stylesheet">
 </head>
@@ -27,13 +22,17 @@
           <li>Enjoy the company of who you're with.</li>
           <li>Order dessert.</li>
         </ol>
-      </section>   
+      </section>
+
       <form method="post" action="#">
+
         <div class="name">
           <label for="name">Name:&nbsp&nbsp</label>
           <input type="text" name="name" id="name"/>
         </div>
+
         <section class="choices">
+          
           <div class="history">
             <p>What did you eat last?</p>
             <select name="last-cuisine" id="last">
@@ -56,6 +55,7 @@
               <option value="vi">Vietnamese</option>
             </select>
           </div>
+
           <div class="preference">
             <p>What're you feelin'?</p>
             <select name="pref-cuisine" id="pref">
@@ -78,12 +78,15 @@
               <option value="vi">Vietnamese</option>
             </select>
           </div>
+
         </section>
 
         <p id="result"></p>
 
         <button onclick="getValue();">Submit</button>
+
       </form>
+
       <footer>
         <img src='../project-gryffindor/img/crest.png' alt="Gryffindor crest."></img>
       </footer>
