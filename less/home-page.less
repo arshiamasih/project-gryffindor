@@ -5,7 +5,7 @@ header {
   border-bottom-right-radius: 10px;
   border-bottom-left-radius: 10px;
 
-  @media @tablet {
+  @media @8 {
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
@@ -15,8 +15,15 @@ header {
     font-family: 'Pacifico', cursive;
     color: white;
 
-    @media @mobile {
+    @media @7 {
+      font-size: 5.5rem;
+    }
+    @media @6 {
       font-size: 5rem;
+    }
+    @media @5 {
+      width: 80%;
+      text-align: center;
     }
   }
 }
@@ -37,6 +44,10 @@ header {
     li {
       font-size: 2rem;
       line-height: 2;
+
+      @media @5 {
+        margin: 15px 2% 10% 0;
+      }
     }
   }
 }
