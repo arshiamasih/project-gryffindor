@@ -1,3 +1,5 @@
+
+
 header {
   .center;
   background-color: rgb(80, 192, 192);
@@ -31,7 +33,6 @@ header {
 .intro {
   margin: 30px 0 0;
   .flexcol;
-  font-family: @main-font;
   
   @media @5 {
     margin: 25px 5% 0;
@@ -57,6 +58,73 @@ header {
   }
 }
 
+form {
+  max-width: 600px;
+  margin: 20px auto;
+  width: 90%;
+  .center;
+  flex-wrap: wrap;
+
+  .name {
+    .center;
+    width: 100%;
+
+    label {
+      font-size: 2rem;
+    }
+
+    input {
+      width: 100%;
+      font-size: 2rem;
+    }
+  }
+  .choices {
+    .wide-center;
+    .center;
+    justify-content: space-around;
+    @media @6 {
+      .flexcol;
+    }
+
+    .history {
+      margin-top: 20px;
+      @media @6 {
+        margin-top: 40px;
+      }
+      .flexcol;
+      p {
+        font-size: 2.5rem;
+      }
+      select {
+        margin-top: 25px;
+        font-size: 2rem;
+        font-family: @main-font;
+      }
+    }
+    .preference {
+      margin-top: 20px;
+      @media @6 {
+        margin-top: 40px;
+      }
+      .flexcol;
+      p {
+        font-size: 2.5rem;
+      }
+      select {
+        margin-top: 25px;
+        font-size: 2rem;
+        font-family: @main-font;
+      }
+    }
+  }
+
+  button {
+    margin-top: 100px;
+    .custom-btns;
+  }
+  
+}
+
 footer {
   .center;
 
@@ -67,5 +135,8 @@ footer {
     right: auto;
     max-width: 50px;
     padding-bottom: 20px;
+    @media @6 {
+      display: none;
+    }
   }
 }
