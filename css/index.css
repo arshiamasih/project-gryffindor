@@ -337,3 +337,6 @@ footer img {
     display: none;
   }
 }
+#total {
+  font-size: 40rem;
+}
