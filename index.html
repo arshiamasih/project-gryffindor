@@ -32,12 +32,12 @@
       <form>
         <div class="name">
           <label for="name">Name:&nbsp&nbsp</label>
-          <input type="text" name="name" id="name" />
+          <input type="text" name="name" id="name"/>
         </div>
         <section class="choices">
           <div class="history">
             <p>What did you eat last?</p>
-            <select name="last-cuisine">
+            <select name="last-cuisine" id="last">
               <option value="nada">A big gulp of air.</option>
               <option value="ba">Barbecue</option>
               <option value="br">Brazilian</option>
@@ -59,7 +59,7 @@
           </div>
           <div class="preference">
             <p>What're you feelin'?</p>
-            <select name="pref-cuisine">
+            <select name="pref-cuisine" id="pref">
               <option value="nada">A big gulp of air.</option>
               <option value="ba">Barbecue</option>
               <option value="br">Brazilian</option>
@@ -80,11 +80,12 @@
             </select>
           </div>
         </section>
-        <button>Submit</button>
+        <button onclick="getValue()">Submit</button>
       </form>
       <footer>
         <img src='../project-gryffindor/img/crest.png' alt="Gryffindor crest."></img>
       </footer>
     </div>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
