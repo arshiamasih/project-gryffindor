@@ -198,6 +198,11 @@ header h1 {
   align-items: center;
   font-family: 'Bree Serif', serif;
 }
+@media (max-width: 500px) {
+  .intro {
+    margin: 25px 5% 0;
+  }
+}
 .intro ol {
   display: flex;
   flex-flow: column;
@@ -206,12 +211,25 @@ header h1 {
   margin: 15px 0 0;
   list-style-type: decimal;
 }
+@media (max-width: 500px) {
+  .intro ol {
+    margin-left: 5%;
+  }
+}
 .intro ol li {
   font-size: 2rem;
   line-height: 2;
 }
-@media (max-width: 500px) {
-  .intro ol li {
-    margin: 15px 2% 10% 0;
-  }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer img {
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  max-width: 50px;
+  padding-bottom: 20px;
 }
