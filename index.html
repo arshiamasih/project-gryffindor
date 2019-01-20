@@ -11,7 +11,6 @@
 
   <link href="css/index.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Bree+Serif|Pacifico" rel="stylesheet">
-  <script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
@@ -29,7 +28,7 @@
           <li>Order dessert.</li>
         </ol>
       </section>   
-      <form>
+      <form method="post" action="#">
         <div class="name">
           <label for="name">Name:&nbsp&nbsp</label>
           <input type="text" name="name" id="name"/>
@@ -80,11 +79,12 @@
             </select>
           </div>
         </section>
-        <button onclick="getValue()">Submit</button>
+        <button onclick="getValue();">Submit</button>
       </form>
       <footer>
         <img src='../project-gryffindor/img/crest.png' alt="Gryffindor crest."></img>
       </footer>
     </div>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
