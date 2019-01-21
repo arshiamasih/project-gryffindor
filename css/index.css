@@ -171,9 +171,9 @@ header {
   }
 }
 header h1 {
-  font-size: 6rem;
+  color: #ffffff;
   font-family: 'Pacifico', cursive;
-  color: white;
+  font-size: 6rem;
 }
 @media (max-width: 700px) {
   header h1 {
@@ -187,16 +187,16 @@ header h1 {
 }
 @media (max-width: 500px) {
   header h1 {
-    width: 80%;
     text-align: center;
+    width: 80%;
   }
 }
 .intro {
-  margin: 30px 0 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 30px 0 0;
 }
 @media (max-width: 500px) {
   .intro {
@@ -221,13 +221,13 @@ header h1 {
   line-height: 2;
 }
 form {
-  max-width: 600px;
-  margin: 20px auto;
-  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 600px;
+  width: 90%;
+  margin: 20px auto;
 }
 form .name {
   display: flex;
@@ -235,12 +235,10 @@ form .name {
   align-items: center;
   width: 100%;
 }
-form .name label {
-  font-size: 2rem;
-}
 form .name input {
+  font-family: 'Bree Serif', serif;
+  font-size: 3rem;
   width: 100%;
-  font-size: 2rem;
 }
 form .choices {
   width: 100%;
@@ -259,11 +257,11 @@ form .choices {
   }
 }
 form .choices .history {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 @media (max-width: 600px) {
   form .choices .history {
@@ -274,16 +272,16 @@ form .choices .history p {
   font-size: 2.5rem;
 }
 form .choices .history select {
-  margin-top: 25px;
-  font-size: 2rem;
   font-family: 'Bree Serif', serif;
+  font-size: 2rem;
+  margin-top: 25px;
 }
 form .choices .preference {
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 @media (max-width: 600px) {
   form .choices .preference {
@@ -294,12 +292,11 @@ form .choices .preference p {
   font-size: 2.5rem;
 }
 form .choices .preference select {
-  margin-top: 25px;
-  font-size: 2rem;
   font-family: 'Bree Serif', serif;
+  font-size: 2rem;
+  margin-top: 25px;
 }
 form button {
-  margin-top: 100px;
   width: 200px;
   height: 60px;
   color: white;
@@ -312,6 +309,7 @@ form button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin-top: 100px;
 }
 form button:hover {
   background-color: #ffffff;

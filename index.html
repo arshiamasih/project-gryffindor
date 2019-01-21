@@ -24,18 +24,18 @@
         </ol>
       </section>
 
-      <form method="post" action="#">
+      <form method="get" action="#">
 
         <div class="name">
-          <label for="name">Name:&nbsp&nbsp</label>
-          <input type="text" name="name" id="name"/>
+          <label for="name"></label>
+          <input type="text" name="name" id="name" placeholder=" Name" autofocus required/>
         </div>
 
         <section class="choices">
           
           <div class="history">
             <p>What did you eat last?</p>
-            <select name="last-cuisine" id="last">
+            <select name="last-cuisine" id="last" required>
               <option value="nada">I had a deep breath.</option>
               <option value="ba">Barbecue</option>
               <option value="br">Brazilian</option>
@@ -58,7 +58,7 @@
 
           <div class="preference">
             <p>What're you feelin'?</p>
-            <select name="pref-cuisine" id="pref">
+            <select name="pref-cuisine" id="pref" required>
               <option value="nada">I AIN'T CARE.</option>
               <option value="ba">Barbecue</option>
               <option value="br">Brazilian</option>
@@ -83,7 +83,7 @@
 
         <p id="result"></p>
 
-        <button onclick="getValue();">Submit</button>
+        <button type="button" onclick="getValue();">Submit</button>
 
       </form>
 

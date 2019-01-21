@@ -1,3 +1,4 @@
+// Generates random number limited by array length.
 function generateRandomNum(array) {
   return Math.floor(Math.random() * array.length)
 }
@@ -35,6 +36,10 @@ function getValue () {
 
   var total = document.querySelector('#result');
   total.innerText = restaurant;
+
+  console.log(name);
+  console.log(last)
+  console.log(pref)
 
   console.log(restaurant);
 }
