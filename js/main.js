@@ -16,7 +16,7 @@ function getValue () {
     nada: ['Whatever'],
     ch: [ 'Panda Express', 'Dim Sum', "Din Tai Fung", "Sam Woo"],
     ba: [ 'Ribs', 'Pulled Pork', "Beef", "Chicken"],
-    vi: [ 'Pho', 'Spring Rolls', "Bun Bao", "Lee's"],
+    vi: [ 'Pho', 'Spring Rolls', "Banh Beo", "Lee's"],
     th: [ 'Manaow', 'Long Beach Thai', "ST Noodle Bar", "Kha Soi"],
     in: [ 'Kabobs', 'Curry', "Samosas", "Saffron"],
     br: [ 'Pickles', 'Bananas', "Strawberries", "Peanuts"],

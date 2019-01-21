@@ -70,6 +70,7 @@ form {
       font-family: @main-font;
       font-size: 3rem;
       width: 100%;
+      padding: 10px 15px;
     }
   }
 
@@ -93,12 +94,6 @@ form {
       p {
         font-size: 2.5rem;
       }
-
-      select {
-        font-family: @main-font;
-        font-size: 2rem;
-        margin-top: 25px;
-      }
     }
 
     .preference {
@@ -108,24 +103,19 @@ form {
       @media @6 {
         margin-top: 40px;
       }
-      
+
       p {
         font-size: 2.5rem;
       }
-
-      select {
-        font-family: @main-font;
-        font-size: 2rem;
-        margin-top: 25px;
-      }
     }
   }
+}
 
-  button {
-    .custom-btns;
-    margin-top: 100px;
-  }
-  
+select {
+  font-family: @main-font;
+  font-size: 2rem;
+  padding: 10px;
+  margin-top: 25px;
 }
 
 footer {
@@ -147,4 +137,23 @@ footer {
 
 #total {
   font-size: 40rem;
+}
+.returned-result {
+  .flexcol;
+  position: relative;
+  width: 100%;
+
+  #result {
+    position: absolute;
+    top: 0px;
+    font-family: @main-font;
+    font-size: 6rem;
+    margin: 10px auto 20px;
+  }
+
+  button {
+    .custom-btns;
+    margin-top: 120px;
+  }
+  
 }
