@@ -443,54 +443,48 @@ function getValue () {
   const last1 = document.querySelector('#last1').value; 
   const last2 = document.querySelector('#last2').value; 
   // User Cuisine Preference Input - cuisineObject Key
-  const pref1 = document.querySelector('#pref1').value; 
-  const pref2 = document.querySelector('#pref2').value; 
+  let pref1 = document.querySelector('#pref1').value; 
+  let pref2 = document.querySelector('#pref2').value; 
   // User Cost Input - String
   const cost1 = document.querySelector('#cost1').value; 
   const cost2 = document.querySelector('#cost2').value; 
   // Array of cuisines
   let cuisineArray = ['ja', 'bq', 'vi', 'th', 'ch', 'fr', 'in', 'br', 'na', 'ko', 've', 'mx', 'it', 'ca', 'me', 'si'];
-
-  let choiceArray = [];
-
-
   
   // Generates random number constrained by array length.
   const generateRandomNum = array => Math.floor(Math.random() * array.length);
   // Generates random index according to cuisineArray length
-  let arrayIndex = generateRandomNum(cuisineObj[pref1]);
-  // let nadaIndex = generateRandomNum(cuisineArray);
-  // let nadaChoice = cuisineArray[nadaIndex];
-  // console.log(nadaChoice);
+  let nadaIndex = generateRandomNum(cuisineArray);
+  let nadaChoice = cuisineArray[nadaIndex];
 
-  // if (pref1 !== last1 || pref1 !== last2) {
-  //   let user1Array = pref1;
-  // }  
-  // if (pref2 !== last1 || pref2 !== last2) {
-  //   let user2Array = pref2;
-  // }  
+  if (pref1 === 'nada') { pref1 = nadaChoice };
+  if (pref2 === 'nada') { pref2 = nadaChoice };
 
-  // let combinedArray = user1Array.concat(user2Array);
+  let user1Array = cuisineObj[pref1];
+  let user2Array = cuisineObj[pref2];
 
-
+  let combinedArray = user1Array.concat(user2Array);
 
   // FILTER ARRAY BY COST
+  let cheapestCost;
+  
+  if (cost1 <= cost2) { 
+    cheapestCost = cost1; 
+  } else {
+    cheapestCost = cost2;
+  };
 
-
-
-
+  let filteredArray = combinedArray.filter((restObj) => {
+    return restObj.cost.length <= cheapestCost.length;
+  })
 
   // PICK RANDOM OUT OF FINAL ARRAY
-
-
-
-
-
+  let finalPick = filteredArray[generateRandomNum(filteredArray)];
 
   // Captures restaurant URL - String
-  let yelpURL = cuisineObj[pref1][arrayIndex]['url'];
+  let yelpURL = finalPick.url
   // Captures restaurant name - String
-  let restaurantName = cuisineObj[pref1][arrayIndex]['name'];
+  let restaurantName = finalPick.name
   // HTML element that displays final output
   const total = document.querySelector('#result'); 
   // Sets HTML element text and URL to output
@@ -500,15 +494,19 @@ function getValue () {
   }
 
   // TEST LOGS
-  console.log(name1);
-  console.log(name2);
-  console.log(last1);
-  console.log(last2);
-  console.log(pref1);
-  console.log(pref2);
-  console.log(cost1);
-  console.log(cost2);
-  console.log(total);
+  console.log("First User --> ", name1);
+  console.log("Second User --> ", name2);
+  console.log("First History --> ", last1);
+  console.log("Second History --> ", last2);
+  console.log("First Preference --> ", pref1);
+  console.log("Second Preference --> ", pref2);
+  console.log("First Budget --> ", cost1);
+  console.log("Second Budget --> ", cost2);
+  console.log("Ambivalent Choice  --> ", nadaChoice);
+  console.log("All Options --> ", combinedArray);
+  console.log("Lowest Budget --> ", cheapestCost);
+  console.log("Filtered Options --> ", filteredArray);
+  console.log("Final Restaurant Object --> ", finalPick);
 
   outputData(restaurantName, yelpURL);
 }
