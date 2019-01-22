@@ -1,4 +1,4 @@
-// //======================== || DATA OBJECT ||
+// //======================== || DATA OBJECT START ||
 const cuisineObj = {
   ja: [
       {
@@ -448,26 +448,58 @@ function getValue () {
   // User Cost Input - String
   const cost1 = document.querySelector('#cost1').value; 
   const cost2 = document.querySelector('#cost2').value; 
-  // HTML element that displays final output
-  const total = document.querySelector('#result'); 
+  // Array of cuisines
+  let cuisineArray = ['ja', 'bq', 'vi', 'th', 'ch', 'fr', 'in', 'br', 'na', 'ko', 've', 'mx', 'it', 'ca', 'me', 'si'];
 
+  let choiceArray = [];
+
+
+  
   // Generates random number constrained by array length.
   const generateRandomNum = array => Math.floor(Math.random() * array.length);
   // Generates random index according to cuisineArray length
   let arrayIndex = generateRandomNum(cuisineObj[pref1]);
+  // let nadaIndex = generateRandomNum(cuisineArray);
+  // let nadaChoice = cuisineArray[nadaIndex];
+  // console.log(nadaChoice);
+
+  // if (pref1 !== last1 || pref1 !== last2) {
+  //   let user1Array = pref1;
+  // }  
+  // if (pref2 !== last1 || pref2 !== last2) {
+  //   let user2Array = pref2;
+  // }  
+
+  // let combinedArray = user1Array.concat(user2Array);
+
+
+
+  // FILTER ARRAY BY COST
+
+
+
+
+
+  // PICK RANDOM OUT OF FINAL ARRAY
+
+
+
+
 
 
   // Captures restaurant URL - String
   let yelpURL = cuisineObj[pref1][arrayIndex]['url'];
   // Captures restaurant name - String
-  let restaurant = cuisineObj[pref1][arrayIndex]['name'];
-
+  let restaurantName = cuisineObj[pref1][arrayIndex]['name'];
+  // HTML element that displays final output
+  const total = document.querySelector('#result'); 
   // Sets HTML element text and URL to output
   const outputData = (name, url) => {
     total.setAttribute("href", url)
     total.innerText = name;
   }
 
+  // TEST LOGS
   console.log(name1);
   console.log(name2);
   console.log(last1);
@@ -478,5 +510,16 @@ function getValue () {
   console.log(cost2);
   console.log(total);
 
-  outputData(restaurant, yelpURL);
+  outputData(restaurantName, yelpURL);
 }
+
+
+/*
+
+Access pref1 and concatenate to pref2. If either are equal to last1 or last2, omit from result. 
+Array of restaurantObjects and two cost variables. Filter for lower of two costs into choiceArray.
+Take filtered choiceArray, pick random restaurantObject using index.
+Assign restaurantObject name key and URL key to variables: restaurantName & yelpURL
+
+
+*/
