@@ -456,16 +456,17 @@ function getValue () {
   // Generates random index according to cuisineArray length
   let nadaIndex = generateRandomNum(cuisineArray);
   let nadaChoice = cuisineArray[nadaIndex];
-
   if (pref1 === 'nada') { pref1 = nadaChoice };
   if (pref2 === 'nada') { pref2 = nadaChoice };
+
+  // ACCESS CUISINE ARRAYS AND CONCAT
 
   let user1Array = cuisineObj[pref1];
   let user2Array = cuisineObj[pref2];
 
   let combinedArray = user1Array.concat(user2Array);
 
-  // FILTER ARRAY BY COST
+  // FILTER CONCATENATED ARRAY BY COST
   let cheapestCost;
   
   if (cost1 <= cost2) { 
@@ -518,6 +519,5 @@ Access pref1 and concatenate to pref2. If either are equal to last1 or last2, om
 Array of restaurantObjects and two cost variables. Filter for lower of two costs into choiceArray.
 Take filtered choiceArray, pick random restaurantObject using index.
 Assign restaurantObject name key and URL key to variables: restaurantName & yelpURL
-
 
 */
