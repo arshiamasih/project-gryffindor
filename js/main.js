@@ -438,28 +438,33 @@ const cuisineObj = {
 function getValue () {
   
   var name = document.querySelector('#name').value;
-  var last = document.querySelector('#last').value;
   var pref = document.querySelector('#pref').value;
+  var cost = document.querySelector('#cost').value;
   
   function generateRandomNum(array) {
     return Math.floor(Math.random() * array.length)
   }
 
-  let arrayIndex = generateRandomNum(cuisineObj[pref]);
+  let cuisineArray = cuisineObj[pref];
+  let filteredArray = cuisineArray.filter(restObj => {
+    return restObj.cost.length <= cost.length;
+  });
 
-  let restaurant = cuisineObj[pref][arrayIndex]['name'];
+  if (filteredArray.length === 0) {
+    alert("Sorry, nothing in your price range.");
+  }
+
+  let arrayIndex = generateRandomNum(filteredArray);
+
+  let restaurant = filteredArray[arrayIndex]['name'];
 
   var total = document.querySelector('#result');
   total.innerText = restaurant;
 
-  console.log(name);
-  console.log(last);
-  console.log(pref);
-
-  console.log(restaurant);
-
-
-
-
-  
+  console.log("User --> ", name);
+  console.log("Choice --> ",pref);
+  console.log("cuisineArray --> ", cuisineArray);
+  console.log("Cost --> ", cost);
+  console.log("filteredArray --> ", cuisineArray);
+  console.log("Final Pick --> ", restaurant);
 }
