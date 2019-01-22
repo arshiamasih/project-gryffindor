@@ -40,17 +40,21 @@
 
 
       <form method="get" action="#">
-
-        <div class="name">
-          <label for="name"></label>
-          <input type="text" name="name" id="name" placeholder=" Name" autofocus required/>
+        <div class="multi-users">
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" name="name" id="name1" placeholder=" Name" autofocus required/>
+          </div>
+          <div class="name">
+            <label for="name"></label>
+            <input type="text" name="name" id="name2" placeholder=" Name" autofocus required/>
+          </div>
         </div>
-
         <section class="choices">
           
           <div class="history">
             <p>What did you eat last?</p>
-            <select name="last-cuisine" id="last" required>
+            <select name="last-cuisine" id="last1" required>
               <option value="nada">I had a deep breath.</option>
               <option value="bq">Barbecue</option>
               <option value="br">Brazilian</option>
@@ -70,10 +74,53 @@
               <option value="vi">Vietnamese</option>
             </select>
           </div>
-
+          <div class="history">
+            <p>What did you eat last?</p>
+            <select name="last-cuisine" id="last2" required>
+              <option value="nada">I had a deep breath.</option>
+              <option value="bq">Barbecue</option>
+              <option value="br">Brazilian</option>
+              <option value="ca">Cajun</option>
+              <option value="ch">Chinese</option>
+              <option value="fr">French</option>
+              <option value="me">Mediterranean</option>
+              <option value="in">Indian</option>
+              <option value="it">Italian</option>
+              <option value="ja">Japanese</option>
+              <option value="ko">Korean</option>
+              <option value="mx">Mexican</option>
+              <option value="na">New American</option>
+              <option value="si">Singaporean</option>
+              <option value="th">Thai</option>
+              <option value="ve">Vegan</option>
+              <option value="vi">Vietnamese</option>
+            </select>
+          </div>
           <div class="preference">
             <p>What're you feelin'?</p>
-            <select name="pref-cuisine" id="pref" required>
+            <select name="pref-cuisine" id="pref1" required>
+              <option value="nada">I AIN'T CARE.</option>
+              <option value="bq">Barbecue</option>
+              <option value="br">Brazilian</option>
+              <option value="ca">Cajun</option>
+              <option value="ch">Chinese</option>
+              <option value="fr">French</option>
+              <option value="me">Mediterranean</option>
+              <option value="in">Indian</option>
+              <option value="it">Italian</option>
+              <option value="ja">Japanese</option>
+              <option value="ko">Korean</option>
+              <option value="mx">Mexican</option>
+              <option value="na">New American</option>
+              <option value="si">Singaporean</option>
+              <option value="th">Thai</option>
+              <option value="ve">Vegan</option>
+              <option value="vi">Vietnamese</option>
+            </select>
+          </div>
+          <div class="preference">
+            <p>What're you feelin'?</p>
+            <select name="pref-cuisine" id="pref2" required>
               <option value="nada">I AIN'T CARE.</option>
               <option value="bq">Barbecue</option>
               <option value="br">Brazilian</option>
@@ -94,24 +141,32 @@
             </select>
           </div>
 
-          <!-- <div class="cost-options">
+          <div class="cost-options">
             <p>How broke are you?</p>
-            <select name="cost-list" id="cost">
+            <select name="cost-list" id="cost1">
               <option value="$$$">BALLER! ($$$)</option>
               <option value="$$">Meh. ($$)</option>
               <option value="$">broke AF.($)</option>
             </select>
-          </div> -->
+          </div>
+          <div class="cost-options">
+            <p>How broke are you?</p>
+            <select name="cost-list" id="cost2">
+              <option value="$$$">BALLER! ($$$)</option>
+              <option value="$$">Meh. ($$)</option>
+              <option value="$">broke AF.($)</option>
+            </select>
+          </div>
 
         </section>
 
         <section class="returned-result">
-          <p id="result"></p>
+          <a href="#" id="result" target="_blank"></a>
           <button type="button" onclick="getValue();">Submit</button>
         </section>  
 
       </form>
-      
+
 
 
 

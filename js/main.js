@@ -435,27 +435,48 @@ const cuisineObj = {
 }
 //======================== || DATA OBJECT END ||
 
-// Generates random number limited by array length.
-function generateRandomNum(array) {
-  return Math.floor(Math.random() * array.length)
-}
-
 function getValue () {
+  // User Name Input - String
+  const name1 = document.querySelector('#name1').value; 
+  const name2 = document.querySelector('#name2').value; 
+  // User Last Eaten Input - cuisineObject Key
+  const last1 = document.querySelector('#last1').value; 
+  const last2 = document.querySelector('#last2').value; 
+  // User Cuisine Preference Input - cuisineObject Key
+  const pref1 = document.querySelector('#pref1').value; 
+  const pref2 = document.querySelector('#pref2').value; 
+  // User Cost Input - String
+  const cost1 = document.querySelector('#cost1').value; 
+  const cost2 = document.querySelector('#cost2').value; 
+  // HTML element that displays final output
+  const total = document.querySelector('#result'); 
 
-  var name = document.querySelector('#name').value;
-  var last = document.querySelector('#last').value;
-  var pref = document.querySelector('#pref').value;
+  // Generates random number constrained by array length.
+  const generateRandomNum = array => Math.floor(Math.random() * array.length);
+  // Generates random index according to cuisineArray length
+  let arrayIndex = generateRandomNum(cuisineObj[pref1]);
 
-  let arrayIndex = generateRandomNum(cuisineObj[pref]);
 
-  let restaurant = cuisineObj[pref][arrayIndex]['name'];
+  // Captures restaurant URL - String
+  let yelpURL = cuisineObj[pref1][arrayIndex]['url'];
+  // Captures restaurant name - String
+  let restaurant = cuisineObj[pref1][arrayIndex]['name'];
 
-  var total = document.querySelector('#result');
-  total.innerText = restaurant;
+  // Sets HTML element text and URL to output
+  const outputData = (name, url) => {
+    total.setAttribute("href", url)
+    total.innerText = name;
+  }
 
-  console.log(name);
-  console.log(last);
-  console.log(pref);
+  console.log(name1);
+  console.log(name2);
+  console.log(last1);
+  console.log(last2);
+  console.log(pref1);
+  console.log(pref2);
+  console.log(cost1);
+  console.log(cost2);
+  console.log(total);
 
-  console.log(restaurant);
+  outputData(restaurant, yelpURL);
 }

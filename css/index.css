@@ -154,6 +154,7 @@ p {
 }
 a {
   text-decoration: none;
+  color: #50c0c0;
 }
 header {
   display: flex;
@@ -229,13 +230,17 @@ form {
   width: 90%;
   margin: 20px auto;
 }
-form .name {
+form .multi-users {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
 }
-form .name input {
+form .multi-users .name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form .multi-users .name input {
   font-family: 'Bree Serif', serif;
   font-size: 3rem;
   width: 100%;
@@ -247,6 +252,7 @@ form .choices {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 @media (max-width: 600px) {
@@ -287,6 +293,21 @@ form .choices .preference {
 form .choices .preference p {
   font-size: 2.5rem;
 }
+form .choices .cost-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+@media (max-width: 600px) {
+  form .choices .cost-options {
+    margin-top: 40px;
+  }
+}
+form .choices .cost-options p {
+  font-size: 2.5rem;
+}
 select {
   font-family: 'Bree Serif', serif;
   font-size: 2rem;
@@ -302,7 +323,7 @@ footer img {
   position: fixed;
   bottom: 0;
   left: auto;
-  right: auto;
+  right: 20px;
   max-width: 50px;
   padding-bottom: 20px;
 }
@@ -324,10 +345,10 @@ footer img {
 }
 .returned-result #result {
   position: absolute;
-  top: 0px;
+  top: 20px;
   font-family: 'Bree Serif', serif;
-  font-size: 6rem;
-  margin: 10px auto 20px;
+  font-size: 4rem;
+  margin: 15px auto 10px;
 }
 .returned-result button {
   width: 200px;
