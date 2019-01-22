@@ -436,26 +436,37 @@ const cuisineObj = {
 //======================== || DATA OBJECT END ||
 
 function getValue () {
+
   // User Name Input - String
+
   const name1 = document.querySelector('#name1').value; 
   const name2 = document.querySelector('#name2').value; 
+
   // User Last Eaten Input - cuisineObject Key
+
   const last1 = document.querySelector('#last1').value; 
   const last2 = document.querySelector('#last2').value; 
+
   // User Cuisine Preference Input - cuisineObject Key
+
   let pref1 = document.querySelector('#pref1').value; 
   let pref2 = document.querySelector('#pref2').value; 
+
   // User Cost Input - String
+
   const cost1 = document.querySelector('#cost1').value; 
   const cost2 = document.querySelector('#cost2').value; 
-  // Array of cuisines
-  let cuisineArray = ['ja', 'bq', 'vi', 'th', 'ch', 'fr', 'in', 'br', 'na', 'ko', 've', 'mx', 'it', 'ca', 'me', 'si'];
-  
+
   // Generates random number constrained by array length.
+
   const generateRandomNum = array => Math.floor(Math.random() * array.length);
-  // Generates random index according to cuisineArray length
-  let nadaIndex = generateRandomNum(cuisineArray);
-  let nadaChoice = cuisineArray[nadaIndex];
+  
+  
+  // LOGIC FOR NADA CHOICE
+
+  const cuisineArray = Object.keys(cuisineObj);
+  const nadaIndex = generateRandomNum(cuisineArray);
+  const nadaChoice = cuisineArray[nadaIndex];
   if (pref1 === 'nada') { pref1 = nadaChoice };
   if (pref2 === 'nada') { pref2 = nadaChoice };
 
@@ -463,10 +474,10 @@ function getValue () {
 
   let user1Array = cuisineObj[pref1];
   let user2Array = cuisineObj[pref2];
-
   let combinedArray = user1Array.concat(user2Array);
 
   // FILTER CONCATENATED ARRAY BY COST
+
   let cheapestCost;
   
   if (cost1 <= cost2) { 
@@ -479,22 +490,22 @@ function getValue () {
     return restObj.cost.length <= cheapestCost.length;
   })
 
-  // PICK RANDOM OUT OF FINAL ARRAY
+  // PICK RANDOM OUT OF FILTERED ARRAY
+
   let finalPick = filteredArray[generateRandomNum(filteredArray)];
 
-  // Captures restaurant URL - String
+  // OUTPUT DATA TO HTML PAGE
+
   let yelpURL = finalPick.url
-  // Captures restaurant name - String
   let restaurantName = finalPick.name
-  // HTML element that displays final output
   const total = document.querySelector('#result'); 
-  // Sets HTML element text and URL to output
   const outputData = (name, url) => {
     total.setAttribute("href", url)
     total.innerText = name;
   }
 
   // TEST LOGS
+  
   console.log("First User --> ", name1);
   console.log("Second User --> ", name2);
   console.log("First History --> ", last1);
@@ -509,7 +520,10 @@ function getValue () {
   console.log("Filtered Options --> ", filteredArray);
   console.log("Final Restaurant Object --> ", finalPick);
 
+  // ALL MY HOPES & DREAMS
+
   outputData(restaurantName, yelpURL);
+
 }
 
 
