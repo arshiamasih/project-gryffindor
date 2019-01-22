@@ -435,16 +435,15 @@ const cuisineObj = {
 }
 //======================== || DATA OBJECT END ||
 
-// Generates random number limited by array length.
-function generateRandomNum(array) {
-  return Math.floor(Math.random() * array.length)
-}
-
 function getValue () {
-
+  
   var name = document.querySelector('#name').value;
   var last = document.querySelector('#last').value;
   var pref = document.querySelector('#pref').value;
+  
+  function generateRandomNum(array) {
+    return Math.floor(Math.random() * array.length)
+  }
 
   let arrayIndex = generateRandomNum(cuisineObj[pref]);
 
@@ -458,4 +457,9 @@ function getValue () {
   console.log(pref);
 
   console.log(restaurant);
+
+
+
+
+  
 }

@@ -287,6 +287,21 @@ form .choices .preference {
 form .choices .preference p {
   font-size: 2.5rem;
 }
+form .choices .cost-options {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+@media (max-width: 600px) {
+  form .choices .cost-options {
+    margin-top: 40px;
+  }
+}
+form .choices .cost-options p {
+  font-size: 2.5rem;
+}
 select {
   font-family: 'Bree Serif', serif;
   font-size: 2rem;
